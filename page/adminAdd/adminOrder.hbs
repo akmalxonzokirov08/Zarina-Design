@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 shadow rounded p-4 mb-4">
+      <form action="/admin/order/add">
+        <table class="table table-striped">
+        <thead>
+          <th>#</th>
+          <th>Ism</th>
+          <th>Manzil</th>
+          <th>Telefon raqam</th>
+          <th>O'chirish</th>
+        </thead>
+        <tbody>
+          {{#if order.length}}
+            {{#each order}}
+              <tr>
+                <td>{{incr @index}}</td>
+                <td>{{ism}}</td>
+                <td>{{{manzil}}}</td>
+                <td>{{telefon}}</td>
+                <td>
+                  <form action="/admin/order/delete" method="POST">
+                  <input type="hidden" name="id" value="{{order.id}}">
+                  <button type="submit" class="btn btn-danger my-4">O'chirish</button>
+                  </form>
+                </td>
+              </tr>
+            {{/each}}
+          {{else}}
+            Malumot qo'shilamagan
+          {{/if}}
+        </tbody>
+      </table>
+      </form>
+    </div>
+  </div>
+</div>

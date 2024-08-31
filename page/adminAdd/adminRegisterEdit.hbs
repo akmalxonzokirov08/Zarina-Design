@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto shadow rouded p-4">
+            <h2>Foydalanuvchi qo'shish</h2>
+            {{#if error}}
+                <div class="alert alert-danger">{{error}}</div>
+            {{/if}}
+             {{#if success}}
+                <div class="alert alert-success">{{success}}</div>
+            {{/if}}
+            <form action="/admin/register/edit" method="POST">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Login</label>
+                    <input value="{{user.login}}" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Login"
+                        name="login" required readonly />
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Parol</label>
+                    <input type="password" class="form-control" id="exampleFormControlTextarea1" placeholder="Parol"
+                        name="parol"></input>
+                </div>
+                <input type="hidden" name="id" value="{{user.id}}">
+                <button class="btn btn-primary">Saqlash</button>
+                </form>
+                <form action="/admin/register/delete" method="POST">
+                <input type="hidden" name="id" value="{{user.id}}">
+                 <button type="submit" class="btn btn-danger my-4">O'chirish</button>
+                 </form>
+        </div>
+    </div>
+</div>

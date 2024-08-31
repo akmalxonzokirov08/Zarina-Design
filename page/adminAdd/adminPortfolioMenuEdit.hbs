@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 mx-auto border p-2 mb-5">
+      <h2 class="text-center">Menyu qo'shish</h2>
+      <form action="/admin/portfolioMenu/edit" method="POST">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Parda nomi</label>
+          <input
+            value="{{portfolioMenu.name}}"
+            name="name"
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <input type="hidden" value="{{portfolioMenu._id}}" name="id" />
+        <input type="submit" value="Saqlash" class="btn btn-primary" />
+      </form>
+      <form action="/admin/portfolioMenu/delete" method="POST">
+       <input type="hidden" name="id" value="{{portfolioMenu.id}}" />
+       <button type="submit" class="btn btn-danger my-4">O'chirish</button>
+      </form>
+    </div>
+  </div>
+</div>

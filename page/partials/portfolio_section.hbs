@@ -1,0 +1,141 @@
+ <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="row">
+          {{#if portfolioMenu.length}}
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">Barchasi</li>
+            {{#each portfolioMenu}}
+            <li data-filter=".s{{id}}">{{name}}</li>
+            {{/each}}
+          </ul>
+          {{else}}
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">Barchasi</li>
+              <li data-filter=".filter-app">Feya fasoni</li>
+              <li data-filter=".filter-card">Italyanskiy fason</li>
+              <li data-filter=".filter-web">Bris fasoni</li>
+            </ul>
+          </div>
+          {{/if}}
+        </div>
+        <div class="row portfolio-container">
+          {{#if portfolio.length}}
+          {{#each portfolio}}
+            <div class="col-lg-4 col-md-6 portfolio-item s{{mentor._id}}">
+            <div class="portfolio-wrap">
+              <img src="images/portfolio/{{rasm}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>{{pardaNomi}} </h4>
+                <div class="portfolio-links">
+                  <a href="images/portfolio/{{rasm}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{pardaNomi}}"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+          {{else}}
+           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/feya1.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Feya fason</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/feya1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Feya fason"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/bris1.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Bris</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/bris1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Bris fason"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/feya2.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Feya fason</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/feya2.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Feya fason"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/italya1.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Italyanskiy fason</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/italya1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Italyanskiy fason"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/bris2.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Bris fason</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Bris fason"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/feya3.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Feya fason</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/feya3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Feya fason"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/italya2.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Italyanskiy fason</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/italya2.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Italyanskiy fason"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/italya3.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Italyanskiy fason</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/italya3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Italyanskiy fason"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/bris3.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Bris fason</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/bris3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Bris fason"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </section><!-- End Portfolio Section -->

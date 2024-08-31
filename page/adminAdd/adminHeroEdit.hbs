@@ -1,0 +1,82 @@
+ <div class="container">
+  <div class="row">
+    <div class="col-lg-12 shadow rounded p-4 mb-4">
+      <form action="/admin/hero/edit" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Rasm</label>
+      <input
+        type="file"
+        name="rasm"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+       
+      />
+      <input
+        value="{{hero.rasm}}"
+        type="hidden"
+        name="oldImg"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+       
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail2" class="form-label">Sarlavha</label>
+      <input
+        value="{{hero.sarlavha}}"
+        type="text"
+        name="sarlavha"
+        class="form-control"
+        id="exampleInputEmail2"
+        aria-describedby="emailHelp"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail3" class="form-label">Izoh</label>
+      <input
+        value="{{hero.izoh}}"
+        type="text"
+        name="kasbi"
+        class="form-control"
+        id="exampleInputEmail3"
+        aria-describedby="emailHelp"
+        required
+      />
+    </div>
+    <div class="mb-3">
+          <label for="exampleInputEmail3" class="form-label">Tugma Nomi</label>
+          <input
+            value="{{hero.tugmaNomi}}"
+            type="text"
+            name="tugmaNomi"
+            class="form-control"
+            id="exampleInputEmail3"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail3" class="form-label">Tugma manzili</label>
+          <input
+            value="{{hero.tugmaManzil}}"
+            type="text"
+            name="tugmaManzil"
+            class="form-control"
+            id="exampleInputEmail3"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+    <input type="hidden" value="{{hero._id}}" name="id" />
+    <input type="submit" value="Saqlash" class="btn btn-primary" />
+      </form>
+      <form action="/admin/hero/delete" method="POST">
+    <input type="hidden" name="id" value="{{hero.id}}" />
+    <button type="submit" class="btn btn-danger my-4">O'chirish</button>
+      </form> 
+    </div>
+  </div>
+ </div>

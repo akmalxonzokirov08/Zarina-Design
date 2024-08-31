@@ -1,0 +1,66 @@
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="/">Zarina Design</a></h1>
+      <nav id="navbar" class="navbar">
+        <ul> 
+          {{#if activeHome}}
+          <li><a href="/" class="active">Bosh sahifa</a></li>
+          {{else}}
+          <li><a href="/">Bosh sahifa</a></li>
+          {{/if}}
+          {{#if activeAbout}}
+          <li class="dropdown active"><a href="/about"><span>Biz haqimizda</span> <i class="bi bi-chevron-down"></i></a>
+          {{else}}
+          <li class="dropdown"><a href="/about"><span>Biz haqimizda</span> <i class="bi bi-chevron-down"></i></a>
+          {{/if}}
+            <ul>
+              {{#if activeAbout}}
+              <li><a class="active" href="/about">Biz haqimizda</a></li>
+              {{else}}
+              <li><a href="/about">Biz haqimizda</a></li>
+              {{/if}}
+              {{#if activeTeam}}
+              <li><a class="active" href="/team">Guruh azolari</a></li>
+              {{else}}
+              <li><a href="/team">Guruh azolari</a></li>
+              {{/if}}
+              {{#if activeTestimonials}}
+              <li><a class="active" href="/testimonials">Kilentlar fikri</a></li>
+              {{else}}
+              <li><a href="/testimonials">Kilentlar fikri</a></li>
+              {{/if}}
+            </ul>
+          </li>
+          {{#if activeServices}}
+          <li><a class="active" href="/services">Xizmat Turlari</a></li>
+          {{else}}
+          <li><a href="/services">Xizmat Turlari</a></li>
+          {{/if}}
+          {{#if activePortfolio}}
+          <li><a class="active" href="/portfolio">Qilingan ishlar</a></li>
+          {{else}}
+          <li><a href="/portfolio">Qilingan ishlar</a></li>
+          {{/if}}
+          {{!-- {{#if activePricing}}
+          <li><a class="active" href="/pricing">Narx</a></li>
+          {{else}}
+          <li><a href="/pricing">Narx</a></li>
+          {{/if}} --}}
+          {{#if activeContact}}
+          <li><a class="active" href="/contact">Bog'lanish</a></li>
+          {{else}}
+          <li><a href="/contact">Bog'lanish</a></li>
+          {{/if}}
+          {{#if activeOrder}}
+          <li><a href="/order" class="getstarted avtive">Buyurtma berish</a></li>
+          {{else}}
+          <li><a href="/order" class="getstarted">Buyurtma berish</a></li>
+          {{/if}}
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->

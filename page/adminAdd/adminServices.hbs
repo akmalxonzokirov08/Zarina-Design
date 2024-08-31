@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 mx-auto shadow p-3 rounded mb-4">
+      <form action="/admin/services/add" method="POST">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Ikonka</label>
+          <input
+            type="text"
+            name="ikonka"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+          {{!-- <div class="mb-3">
+          <label for="exampleInputEmail4" class="form-label">Rang</label>
+          <input
+            type="color"
+            name="rang"
+            class="form-control"
+            id="exampleInputEmail4"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div> --}}
+        <div class="mb-3">
+          <label for="exampleInputEmail2" class="form-label">Xizmat turi</label>
+          <input
+            type="text"
+            name="xizmatTuri"
+            class="form-control"
+            id="exampleInputEmail2"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="summernote" class="form-label">Malumot</label>
+          <textarea
+            name="malumot"
+            type="text"
+            class="form-control"
+            id="summernote"
+            aria-describedby="emailHelp"
+            required>
+          </textarea>
+        </div>
+        <input type="submit" value="Saqlash" class="btn btn-primary" />
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 shadow rounded p-4 mb-4">
+      <table class="table table-striped">
+        <thead>
+          <th>#</th>
+          <th>Ikonka</th>
+          {{!-- <th>Rangi</th> --}}
+          <th>Xizmat turi</th>
+          <th>Malumot</th>
+          <th>Tahrirlash</th>
+        </thead>
+        <tbody>
+          {{#if services.length}}
+            {{#each services}}
+              <tr>
+                <td>{{incr @index}}</td>
+                <td><i class="ri-{{ikonka}}"> {{ikonka}}</i></td>
+                {{!-- <td><p style="color:{{rang}}">{{rang}}</p></td> --}}
+                <td>{{xizmatTuri}}</td>
+                <td>{{{malumot}}}</td>
+                <td>
+                  <a
+                    class="btn btn-primary"
+                    href="/admin/services/{{id}}">Tahrirlash</a>
+                </td>
+              </tr>
+            {{/each}}
+          {{else}}
+          Malumot qushilamagan
+          {{/if}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    {{#each ikonka_nomi}}
+      <div class="col-lg-3">
+        <p style="font-size: 20px;">
+          <i class="ri-{{this}} text-primary">{{this}}</i>
+        </p>
+      </div>
+    {{/each}}
+  </div>
+</div>

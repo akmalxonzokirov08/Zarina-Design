@@ -1,0 +1,82 @@
+ <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+           {{#if footer.length}}
+          {{#each footer}}
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>{{saytNomi}} </h3>
+              <p>{{manzil}}<br>
+                <strong>Telefon raqam:</strong>{{telefonRaqam}} <br>
+                <strong>Email manzil:</strong>{{emailKiriting}} <br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+           {{/each}}
+           {{else}}
+             <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Zarina Design</h3>
+              <p>
+                Qo'qon Shahar<br>
+                Kasmanaft 100-uy<br><br>
+                <strong>Telefon raqam:</strong>+998901002222<br>
+                <strong>Email manzil:</strong>zarinadesign@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/akmalxon_z?igsh=MXVwd3VoMGxuMm9zZQ==" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+           {{/if}}
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Foydali manzilar</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/"></a>Bosh sahifa</li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/about">Biz haqimizda</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/services">Xizmat turlari</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/portfolio">Qilingan ishlar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/contact">Bog'lanish</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/order">Buyurtma berish</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Bizning xizmatlarimiz</h4>
+             {{#if services.length}}
+             <ul>
+              {{#each services}}
+              <li><i class="bx bx-chevron-right"></i> <a href="services">{{xizmatTuri}} </a></li>
+              {{/each}}
+             </ul>
+             {{else}}
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Uygacha olib borish</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">O'rnatib berish</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Parda yuvib berish</a></li>
+            </ul>
+            {{/if}}
+          </div>
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Xabar yuborish</h4>
+            <p>Uz fikringizni kiriting sizga xizmatimiz yoqdimi</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Yuborish">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->

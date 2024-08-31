@@ -1,0 +1,97 @@
+   <form action="/admin/hero/add"  method="POST"  class="shadow rounded p-4 mb-4" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Rasm</label>
+          <input
+            type="file"
+            name="rasm"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail2" class="form-label">Sarlavha</label>
+          <input
+            type="text"
+            name="sarlavha"
+            class="form-control"
+            id="exampleInputEmail2"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail3" class="form-label">Izoh</label>
+          <input
+            type="text"
+            name="izoh"
+            class="form-control"
+            id="exampleInputEmail3"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail3" class="form-label">Tugma Nomi</label>
+          <input
+            type="text"
+            name="tugmaNomi"
+            class="form-control"
+            id="exampleInputEmail3"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail3" class="form-label">Tugma manzili</label>
+          <input
+            type="text"
+            name="tugmaManzil"
+            class="form-control"
+            id="exampleInputEmail3"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <input type="submit" value="Saqlash" class="btn btn-primary" />
+      </form>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 shadow p-4">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">№</th>
+            <th scope="col">Rasm</th>
+            <th scope="col">Sarlavha</th>
+            <th scope="col">Izoh</th>
+            <th scope="col">Tugma nomi</th>
+            <th scope="col">Tugma Manzili</th>
+            <th scope="col">Tahrirlaah</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#if hero.length}}
+            {{#each hero}}
+              <tr>
+                <td>{{incr @index}}</td>
+                <td>{{rasm}}</td>
+                <td>{{sarlavha}}</td>
+                <td>{{izoh}}</td>
+                <td>{{tugmaNomi}}</td>
+                <td>{{tugmaManzil}}</td>
+                <td>
+                  <a class="btn btn-primary" href="/admin/hero/{{id}}">Tahrirlash</a>
+                </td>
+              </tr>
+            {{/each}}
+          {{else}}
+            Malumot qo'shilmagan
+          {{/if}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,129 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 mx-auto shadow p-3 rounded mb-4">
+      <form action="/admin/about/add" method="POST">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Sarlavha</label>
+          <input
+            type="text"
+            name="sarlavha"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="summernote" class="form-label">Izoh</label>
+          <textarea
+            name="izoh"
+            type="text"
+            class="form-control"
+            id="summernote"
+            aria-describedby="emailHelp"
+            required>
+          </textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail2" class="form-label">Izoh 1</label>
+          <input
+            type="text"
+            name="izoh1"
+            class="form-control"
+            id="exampleInputEmail2"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail3" class="form-label">Izoh 2</label>
+          <input
+            type="text"
+            name="izoh2"
+            class="form-control"
+            id="exampleInputEmail3"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail4" class="form-label">Izoh 3</label>
+          <input
+            type="text"
+            name="izoh3"
+            class="form-control"
+            id="exampleInputEmail4"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+         <div class="mb-3">
+          <label for="exampleInputEmail4" class="form-label">Izoh 4</label>
+          <input
+            type="text"
+            name="izoh4"
+            class="form-control"
+            id="exampleInputEmail4"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+         <div class="mb-3">
+          <label for="exampleInputEmail4" class="form-label">Izoh 5</label>
+          <input
+            type="text"
+            name="izoh5"
+            class="form-control"
+            id="exampleInputEmail4"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <input type="submit" value="Saqlash" class="btn btn-primary" />
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 shadow rounded p-4 mb-4">
+      <table class="table table-striped">
+        <thead>
+          <th>#</th>
+          <th>Sarlavha</th>
+          <th>Izoh</th>
+          <th>Izoh 1</th>
+          <th>Izoh 2</th>
+          <th>Izoh 3</th>
+          <th>Izoh 4</th>
+          <th>Izoh 5</th>
+          <th>Tahrirlash</th>
+        </thead>
+        <tbody>
+          {{#if about.length}}
+            {{#each about}}
+              <tr>
+                <td>{{incr @index}}</td>
+                <td>{{sarlavha}}</td>
+                <td>{{{izoh}}}</td>
+                <td>{{izoh1}}</td>
+                <td>{{izoh2}}</td>
+                <td>{{izoh3}}</td>
+                <td>{{izoh4}}</td>
+                <td>{{izoh5}}</td>
+                <td>
+                  <a
+                    class="btn btn-primary"
+                    href="/admin/about/{{id}}">Tahrirlash</a>
+                </td>
+              </tr>
+            {{/each}}
+          {{else}}
+            Malumot qo'shilamagan
+          {{/if}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+      <div class="carousel-inner" role="listbox">
+        {{#if hero.length}}
+        {{#each hero}}
+         <!-- Slide 1 -->
+         <div class="carousel-item active" style="background-image: url(images/hero/{{rasm}}); background-size:cover; height:600px; ">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown"><span>{{sarlavha}} </span></h2>
+              <p class="animate__animated animate__fadeInUp">{{izoh}} </p>
+              <a href="{{tugmaManzil}}" class="btn-get-started animate__animated animate__fadeInUp scrollto">{{tugmaNomi}} </a>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+         {{else}}
+        <!-- Slide 1 -->
+         <div class="carousel-item active" style="background-image: url(assets/img/slide/parda1.png)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown"><span>Xush kelibsiz</span></h2>
+              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <a href="/about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Batafsil malumot</a>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+       <div class="carousel-item" style="background-image: url(assets/img/slide/parda2.png)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Sizga qanday xizmatlar kerak </h2>
+              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <a href="/services" class="btn-get-started animate__animated animate__fadeInUp scrollto">Batafsil malumot</a>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+          <div class="carousel-item" style="background-image: url(assets/img/slide/parda3.png)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Bizda siz xoxlagan parda turlaridan bor</h2>
+              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <a href="/portfolio" class="btn-get-started animate__animated animate__fadeInUp scrollto">Batafsil malumot
+              </a>
+            </div>
+          </div>
+        </div>
+          {{/if}}
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+    </div>
+  </section><!-- End Hero -->

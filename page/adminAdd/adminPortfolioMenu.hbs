@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 mx-auto border p-2 mb-5">
+      <h2 class="text-center">Menyu qo'shish</h2>
+      <form action="/admin/portfolioMenu/add" method="POST">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Parda nomi</label>
+          <input
+            name="name"
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <input type="submit" value="Saqlash" class="btn btn-primary" />
+      </form>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <table class="table table">
+        <thead>
+          <tr>
+            <th scope="col">№</th>
+            <th scope="col">Menyu nomi</th>
+          </tr>
+        </thead>
+        <tbody>
+           {{#if portfolioMenu.length}}
+            {{#each portfolioMenu}}
+          <tr>
+            <td>{{incr @index}}</td>
+            <td>{{name}}</td>
+            <td>
+              <a class="btn btn-primary" href="/admin/portfolioMenu/{{id}}">Tahrirlash</a>
+            </td>
+              </tr>
+              </tbody>
+            {{/each}}
+          {{else}}
+            Malumot qo'shilmagan
+          {{/if}}
+          </tr>
+      </table>
+    </div>
+  </div>
+</div>

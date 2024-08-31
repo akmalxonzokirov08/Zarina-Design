@@ -1,0 +1,56 @@
+ <div class="container">
+  <div class="row">
+    <div class="col-lg-12 shadow rounded p-4 mb-4">
+      {{#if portfolio}}
+      <form action="/admin/portfolio/edit" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Rasm</label>
+      <input
+        type="file"
+        name="rasm"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+       
+      />
+      <input
+        value="{{portfolio.rasm}}"
+        type="hidden"
+        name="oldImg"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+       
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail2" class="form-label">Parda nomi</label>
+      <input
+        value="{{portfolio.pardaNomi}}"
+        type="text"
+        name="pardaNomi"
+        class="form-control"
+        id="exampleInputEmail2"
+        aria-describedby="emailHelp"
+        required
+      />
+    </div>
+    <div class="mb-3">
+          <select name="mentor" id="">
+            <option  selected value="{{portfolio.mentor._id}}">{{portfolio.mentor.name}}</option>
+            {{#each portfolioMenu}}
+              <option value="{{_id}}">{{name}}</option>
+            {{/each}}
+          </select>
+        </div>
+    <input type="hidden" value="{{portfolio._id}}" name="id" />
+    <input type="submit" value="Saqlash" class="btn btn-primary"/>
+      </form>
+      <form action="/admin/portfolio/delete" method="POST">
+    <input type="hidden" name="id" value="{{portfolio.id}}" />
+    <button type="submit" class="btn btn-danger my-4">O'chirish</button>
+      </form>
+{{/if}}
+    </div>
+  </div>
+ </div>

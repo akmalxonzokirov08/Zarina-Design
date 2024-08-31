@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 shadow rounded p-4 mb-4">
+      <form action="/admin/footer/edit" method="POST">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Sayt Nomi</label>
+          <input
+            value="{{footer.saytNomi}}"
+            type="text"
+            name="saytNomi"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail2" class="form-label">Manzil</label>
+          <input
+            value="{{footer.manzil}}"
+            type="text"
+            name="manzil"
+            class="form-control"
+            id="exampleInputEmail2"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail3" class="form-label">Telefon raqam</label>
+          <input
+            value="{{footer.telefonRaqam}}"
+            type="text"
+            name="telefonRaqam"
+            class="form-control"
+            id="exampleInputEmail3"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail3" class="form-label">Email Kiriting</label>
+          <input
+            value="{{footer.emailKiriting}}"
+            type="text"
+            name="emailKiriting"
+            class="form-control"
+            id="exampleInputEmail3"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <input type="hidden" value="{{footer._id}}" name="id" />
+        <input type="submit" value="Saqlash" class="btn btn-primary" />
+      </form>
+      <form action="/admin/footer/delete" method="POST">
+        <input type="hidden" name="id" value="{{footer.id}}" />
+        <button type="submit" class="btn btn-danger my-4">O'chirish</button>
+      </form>
+    </div>
+  </div>
+</div>
