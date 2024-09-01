@@ -167,7 +167,7 @@ router.post("/hero/edit", verification , fileHero, async (req, res) => {
   } catch (error) {
     console.log(error);
   }
-})
+});
 // Hero end
 
 // About start
