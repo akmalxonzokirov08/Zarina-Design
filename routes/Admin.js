@@ -1,7 +1,7 @@
 const { Router, response } = require("express");
 const router = Router();
 const verification = require("../middlewear/verification");
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const User = require("../models/user");
 const Hero = require("../models/hero");
 const About = require("../models/about");
