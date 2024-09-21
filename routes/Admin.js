@@ -526,6 +526,6 @@ router.post("/footer/edit" , verification , async(req ,res)=>{
   } catch (error){
       console.log(error)
   }
-})
+}) 
 // Footer end
 module.exports = router;
